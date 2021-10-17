@@ -1,0 +1,45 @@
+<html>
+<head>
+  <title>Firebase Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="login_div" class="main-div">
+    <h3>Firebase Web login Example</h3>
+    <label for="email_field"></label><input type="email" placeholder="Email..." id="email_field" />
+    <label for="password_field"></label><input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Login to Account</button>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <h3>Welcome User</h3>
+    <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    import { initializeApp } from "firebase/app";
+    import { getDatabase } from "firebase/database";
+    // Initialize Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyBCZJSX0wlS0_JnBGALbCaWhM-mzhYgRCI",
+      authDomain: "fir-web-login-a4e7d.firebaseapp.com",
+      projectId: "fir-web-login-a4e7d",
+      storageBucket: "fir-web-login-a4e7d.appspot.com",
+      messagingSenderId: "1077427773428",
+      appId: "1:1077427773428:web:b67debe45ae184a28fe3a1",
+      measurementId: "G-DBTG3B0JK0"
+    };
+     const app = initializeApp(firebaseConfig);
+     const database = getDatabase(app);
+  </script>
+  <script src="index.js"></script>
+
+</body>
+</html>
